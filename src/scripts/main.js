@@ -1,13 +1,9 @@
 'use strict';
 
-document.addEventListener('click', (e) => {
-  if (!e.target.classList.contains('wall')) {
-    return;
-  }
+const spider = document.querySelector('.spider');
+const wall = document.querySelector('.wall');
 
-  const spider = document.querySelector('.spider');
-  const wall = document.querySelector('.wall');
-
+wall.addEventListener('click', (e) => {
   const wallRect = wall.getBoundingClientRect();
   const [wallBorderLeft, wallBorderTop] = [wall.clientLeft, wall.clientTop];
   const [spiderWidth, spiderHeight] = [spider.offsetWidth, spider.offsetHeight];
